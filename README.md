@@ -12,7 +12,35 @@ To fill the crucial gap, this work proposes a novel Adaptive Graph Contrastive L
 
 ![](./AdaGCL.png)
 
-## 2. Running environment
+## 2. Code Structure
+
+```
+.
+├── README.md
+├── AdaGCL.png
+├── Main.py
+├── Model.py
+├── Params.py
+├── DataHandler.py
+├── Utils
+│   ├── TimeLogger.py
+│   └── Utils.py
+└── Datasets
+    ├── beerAdvocate
+    │   ├── trnMat.pkl
+    │   ├── tstMat.pkl
+    │   └── valMat.pkl
+    ├── lastFM
+    │   ├── trnMat.pkl
+    │   ├── tstMat.pkl
+    │   └── valMat.pkl
+    └── sparse_yelp
+        ├── trnMat.pkl
+        ├── tstMat.pkl
+        └── valMat.pkl
+```
+
+## 3. Running environment
 
 We develop our codes in the following environment:
 
@@ -22,7 +50,7 @@ We develop our codes in the following environment:
 - scipy==1.9.1
 - torch-sparse==0.6.17
 
-## 3. Datasets
+## 4. Datasets
 
 | Dataset      | # User | # Item | # Interaction | Interaction Density |
 | ------------ | ------ | ------ | ------------- | ------------------- |
@@ -30,7 +58,7 @@ We develop our codes in the following environment:
 | Yelp         | 42,712 | 26,822 | 182,357       | 1.6 × $10^{-4}$     |
 | BeerAdvocate | 10,456 | 13,845 | 1,381,094     | 9.5 × $10^{-3}$     |
 
-## 4. How to run the codes
+## 5. How to run the codes
 
 The command lines to train AdaGCL on the three datasets are as below. The un-specified hyperparameters in the commands are set as default.
 
@@ -52,7 +80,13 @@ python Main.py --data yelp --ssl_reg 1 --ib_reg 1e-2 --epoch 100
 python Main.py --data beer --ib_reg 1e-2 --lambda0 1e-2 --ssl_reg 1
 ```
 
-## 5. Citation
+## 6. Experimental Results
+
+Performance comparison of baselines on different datasets in terms of Recall@20, NDCG@20, Recall@40, and NDCG@40:
+
+![](./performance.png)
+
+## 7. Citation
 
 If you find this work helpful to your research, please kindly consider citing our paper.
 
