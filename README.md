@@ -18,6 +18,7 @@ To fill the crucial gap, this work proposes a novel Adaptive Graph Contrastive L
 .
 ├── README.md
 ├── AdaGCL.png
+├── performance.png
 ├── Main.py
 ├── Model.py
 ├── Params.py
