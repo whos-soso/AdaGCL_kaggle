@@ -4,6 +4,10 @@ This is the PyTorch implementation for **AdaGCL** proposed in the paper **Adapti
 
 > Yangqin Jiang, Chao Huang, and Lianghao Xia. 2023. Adaptive Graph Contrastive Learning for Recommendation. In Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD ’23), August 6–10, 2023, Long Beach, CA, USA. ACM, New York, NY, USA, 10 pages.
 
+## Update: AdaGCL has been integrated into SSLRec!
+
+[SSLRec](https://github.com/HKUDS/SSLRec) is a PyTorch-based open-source deep learning framework for recommender systems enhanced by self-supervised learning techniques. With SSLRec, you can easily compare our AdaGCL with other research works in the field of recommendation systems.
+
 ## 1. Introduction
 
 Graph neural networks (GNNs) have recently emerged as an effective collaborative filtering (CF) approaches for recommender systems. The key idea of GNN-based recommender systems is to recursively perform message passing along user-item interaction edges to refine encoded embeddings, relying on sufficient and high-quality training data. However, user behavior data in practical recommendation scenarios is often noisy and exhibits skewed distribution. To address these issues, some recommendation approaches, such as SGL, leverage self-supervised learning to improve user representations. These approaches conduct self-supervised learning through creating contrastive views, but they depend on the tedious trial-and-error selection of augmentation methods. 
